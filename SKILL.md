@@ -14,7 +14,7 @@ When the person asks to receive the briefing every morning:
 1. If they did not say at what time, ask the time and nothing else, in one short question. It runs on working days, Monday to Friday, unless they name other days.
 2. Read the scheduled messages: `call_recipe("cerase-schedule.list_schedules", {})`. If one already names this skill, change its time with `call_recipe("cerase-schedule.update_schedule", {"id": "<its id>", "cron_expression": "<minute> <hour> * * 1-5"})` instead of creating a second one.
 3. Otherwise schedule it: `call_recipe("cerase-schedule.create_recurring", {"label": "<«Briefing del mattino», in the person's language>", "message_body": "<«Prepara il briefing del mattino con la competenza morning-briefing.», in the person's language>", "cron_expression": "<minute> <hour> * * 1-5"})`. The message names this skill and repeats none of its steps. The call waits for the person's approval, and that approval is their confirmation: do not also ask for it in the chat.
-4. Say in one line when the first briefing will arrive.
+4. While the approval waits, say only that the briefing starts once the person approves. When the note with its result arrives, say in one line when the first briefing comes, in the words of the result's `next_run`: never work the day or the time out yourself.
 
 To stop it, cancel that message with `call_recipe("cerase-schedule.cancel_schedule", {"id": "<its id>"})` once the person asks.
 
