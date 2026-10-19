@@ -1,0 +1,9 @@
+# Registry display text in the platform's other locales.
+#
+# The base fields -- SKILL.md's `description` and cerase.json's -- are the SOURCE
+# locale and are English; package_translations forbids a row for it, so this file
+# can only ever hold the others. It is registry metadata: the seeder keeps it out
+# of the bundle that ships to the agent.
+it:
+  display_name: "Briefing del mattino"
+  description: "Usa quando un messaggio programmato chiede il briefing del mattino, quando la persona chiede il punto della sua giornata (le riunioni di oggi, la posta che la aspetta, le scadenze), o quando chiede di ricevere quel riepilogo ogni mattina, di cambiarne l'orario o di fermarlo. Legge il calendario del giorno, la posta arrivata dal giorno lavorativo precedente e le attività aperte, e scrive un solo messaggio: le riunioni di oggi con orario e materiale, le mail che aspettano una decisione della persona con cosa chiede ciascuna e per quando, e le scadenze. Non invia, non sposta e non segna nulla. Per riceverlo ogni mattina chiede solo l'orario, poi programma un messaggio ricorrente nei giorni lavorativi che nomina questa competenza, in attesa dell'approvazione della persona."

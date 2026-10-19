@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "namespace": "studio.guidance",
+  "name": "morning-briefing",
+  "type": "skill",
+  "display_name": "Morning briefing",
+  "description": "Use when a scheduled message asks for the morning briefing, when the person asks for a summary of their day (today's meetings, the mail waiting for them, the deadlines), or when the person asks to receive that summary every morning, to change its time or to stop it. It reads the day's calendar, the mail received since the previous working day and the open tasks on the board, and writes one message: today's meetings with their time and material, the mails waiting for the person's decision with what each asks and by when, and the deadlines. It sends, moves and marks nothing. To receive it every morning it asks only the time, then schedules one recurring message on working days that names this skill, which waits for the person's approval.",
+  "license": "MIT"
+}
